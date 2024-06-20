@@ -1,6 +1,6 @@
 # Email2JSON-Extractor
 
-Email2JSON-Convertor is a project designed to convert emails in PDF or PNG format into a structured JSON format. The application uses OCR (Optical Character Recognition) to extract text from email images and then processes this text to extract key-value pairs representing the email content.
+Email2JSON-Extractor is a project designed to convert emails in PDF or PNG format into a structured JSON format. The application uses OCR (Optical Character Recognition) to extract text from email images and then processes this text to extract key-value pairs using LLM, representing the email content. The final JSoN Structured output contains keys, "From", "To", "Cc", "BCc", "Date", "Time", "Subject", "Body", and "Summary".
 
 ## Table of Contents
 
@@ -14,15 +14,15 @@ Email2JSON-Convertor is a project designed to convert emails in PDF or PNG forma
 
 - Upload PDF or PNG email files.
 - Extract text from images using PaddleOCR.
-- Parse email contents into key-value pairs.
-- Convert parsed content into JSON format.
+- Parse email contents into key-value pairs using LLM.
+- Convert parsed content into JSON format using Langchain Custom Tools.
 
 ## Installation
 
 1. Clone the repository:
     ```bash
-    git clone https://github.com/yourusername/Email2JSON-Convertor.git
-    cd Email2JSON-Convertor
+    git clone https://github.com/yourusername/Email2JSON-Extractor.git
+    cd Email2JSON-Extractor
     ```
 
 2. Create a virtual environment and activate it:
@@ -50,7 +50,7 @@ Email2JSON-Convertor is a project designed to convert emails in PDF or PNG forma
 ## Project Structure
 
 ```plaintext
-Email2JSON-Convertor/Source/
+Email2JSON-Extractor/Source/
 │
 ├── app.py          # Streamlit app for file upload and displaying results
 ├── ocr.py          # OCR processing using PaddleOCR
@@ -58,6 +58,6 @@ Email2JSON-Convertor/Source/
 ├── tool.py         # Convert key-value content into JSON format
 ├── requirements.txt# List of required dependencies
 
-Email2JSON-Convertor/
+Email2JSON-Extractor/
 │
 ├── README.md       # Project documentation
