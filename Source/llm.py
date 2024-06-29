@@ -7,7 +7,7 @@ class LLM():
     # initializing llama 3 instance
     def __init__(self, email:str):
 
-        self.llm = HuggingFaceEndpoint(repo_id="meta-llama/Meta-Llama-3-8B-Instruct", max_length=512,huggingfacehub_api_token="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")
+        self.llm = HuggingFaceEndpoint(repo_id="meta-llama/Meta-Llama-3-8B-Instruct", max_length=512,huggingfacehub_api_token="HUGGINGFACE-API-KEY")
         self.email = email
      
     # importing prompt
